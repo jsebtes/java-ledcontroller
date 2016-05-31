@@ -1,0 +1,44 @@
+{
+  "ledRgbs": [
+    {
+      "id": 1,
+      "label": "led1",
+      "address": 1,
+      "colorRgb": {
+        "red": 0,
+        "green": 0,
+        "blue": 0
+      }
+    },
+    {
+      "id": 2,
+      "label": "led2",
+      "address": 4,
+      "colorRgb": {
+        "red": 0,
+        "green": 0,
+        "blue": 0
+      }
+    },
+    {
+      "id": 3,
+      "label": "led3",
+      "address": 7,
+      "colorRgb": {
+        "red": 0,
+        "green": 0,
+        "blue": 0
+      }
+    },
+    {
+      "id": 4,
+      "label": "led4",
+      "address": 10,
+      "colorRgb": {
+        "red": 0,
+        "green": 0,
+        "blue": 0
+      }
+    }
+  ]
+}
