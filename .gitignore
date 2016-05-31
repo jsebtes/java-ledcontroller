@@ -3,7 +3,6 @@
 /bin/
 /.settings/
 /.classpath
-/dependency-reduced-pom.xml
 /ledcontroller.iml
 /.idea/
 
