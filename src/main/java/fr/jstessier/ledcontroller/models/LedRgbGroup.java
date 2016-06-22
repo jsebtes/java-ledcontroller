@@ -9,11 +9,13 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
+import java.util.Collections;
+import java.util.List;
 import java.util.Objects;
 
-public class LedRgb implements Serializable {
+public class LedRgbGroup implements Serializable{
 
-    private static final long serialVersionUID = -3555966988997667498L;
+    private static final long serialVersionUID = 3989960271714872830L;
 
     @Min(1)
     @Max(Integer.MAX_VALUE)
@@ -26,10 +28,9 @@ public class LedRgb implements Serializable {
     private final String label;
 
     @NotNull
-    @Min(1)
-    @Max(509)
-    @JsonProperty("address")
-    private final Integer address;
+    @Size(min = 0, max = 20)
+    @JsonProperty("ledRgbIds")
+    private final List<Integer> ledRgbIds;
 
     @NotNull
     @Valid
@@ -37,22 +38,27 @@ public class LedRgb implements Serializable {
     private final ColorRgb colorRgb;
 
     @JsonCreator
-    public LedRgb(@JsonProperty("id") final Integer id,
+    public LedRgbGroup(@JsonProperty("id") final Integer id,
             @JsonProperty("label") final String label,
-            @JsonProperty("address") final Integer address,
+            @JsonProperty("ledRgbIds") final List<Integer> ledRgbIds,
             @JsonProperty("colorRgb") final ColorRgb colorRgb) {
         this.id = id;
-        this.address = address;
         this.label = label;
+        if (ledRgbIds == null) {
+            this.ledRgbIds = Collections.unmodifiableList(Collections.emptyList());
+        }
+        else {
+            this.ledRgbIds = Collections.unmodifiableList(ledRgbIds);
+        }
         this.colorRgb = colorRgb;
     }
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("LedRgb{");
+        final StringBuilder sb = new StringBuilder("LedRgbGroup{");
         sb.append("id=").append(id);
         sb.append(", label='").append(label).append('\'');
-        sb.append(", address=").append(address);
+        sb.append(", ledRgbIds=").append(ledRgbIds);
         sb.append(", colorRgb=").append(colorRgb);
         sb.append('}');
         return sb.toString();
@@ -61,17 +67,17 @@ public class LedRgb implements Serializable {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof LedRgb)) return false;
-        LedRgb ledRgb = (LedRgb) o;
-        return Objects.equals(getId(), ledRgb.getId())
-                && Objects.equals(getLabel(), ledRgb.getLabel())
-                && Objects.equals(getAddress(), ledRgb.getAddress())
-                && Objects.equals(getColorRgb(), ledRgb.getColorRgb());
+        if (!(o instanceof LedRgbGroup)) return false;
+        LedRgbGroup that = (LedRgbGroup) o;
+        return Objects.equals(id, that.id) &&
+                Objects.equals(label, that.label) &&
+                Objects.equals(getLedRgbIds(), that.getLedRgbIds()) &&
+                Objects.equals(getColorRgb(), that.getColorRgb());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getLabel(), getAddress(), getColorRgb());
+        return Objects.hash(id, label, getLedRgbIds(), getColorRgb());
     }
 
     public Integer getId() {
@@ -82,8 +88,8 @@ public class LedRgb implements Serializable {
         return label;
     }
 
-    public Integer getAddress() {
-        return address;
+    public List<Integer> getLedRgbIds() {
+        return ledRgbIds;
     }
 
     public ColorRgb getColorRgb() {

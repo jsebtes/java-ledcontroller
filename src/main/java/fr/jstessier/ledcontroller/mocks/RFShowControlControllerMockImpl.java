@@ -32,14 +32,19 @@ public class RFShowControlControllerMockImpl implements RFShowControlController 
     }
 
     @Override
+    public RFShowControlController resetAndFlushChannelValues() throws RFShowControlException {
+        return resetChannelValues().flushChannelValues();
+    }
+
+    @Override
     public byte[] getChannelValues() {
         LOGGER.info("call getChannelValues : channelValues={}", Arrays.toString(channelValues));
         return channelValues;
     }
 
     @Override
-    public RFShowControlController sendChannelValues() throws RFShowControlException {
-        LOGGER.info("call sendChannelValues : channelValues={}", Arrays.toString(channelValues));
+    public RFShowControlController flushChannelValues() throws RFShowControlException {
+        LOGGER.info("call flushChannelValues : channelValues={}", Arrays.toString(channelValues));
         return this;
     }
 
@@ -80,10 +85,8 @@ public class RFShowControlControllerMockImpl implements RFShowControlController 
     }
 
     @Override
-    public RFShowControlController updateAndSendChannelValues(byte[] newChannelValues) throws RFShowControlException {
-        updateChannelValues(newChannelValues);
-        sendChannelValues();
-        return this;
+    public RFShowControlController updateAndFlushChannelValues(byte[] newChannelValues) throws RFShowControlException {
+        return null;
     }
 
 }
