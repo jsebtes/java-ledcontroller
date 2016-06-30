@@ -5,4 +5,6 @@
 /.classpath
 /ledcontroller.iml
 /.idea/
-
+/ledcontroller.log
+/src/main/resources/static/javascript/dist/
+/src/main/resources/static/javascript/node_modules/

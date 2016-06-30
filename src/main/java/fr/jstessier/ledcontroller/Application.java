@@ -50,7 +50,7 @@ public class Application {
     @Autowired
     Environment environment;
 
-    @Bean
+    /*@Bean
     RFShowControlController rFShowControlController() throws RFShowControlException {
 
         final byte spiChannel = environment.getRequiredProperty("fr.jstessier.ledcontroller.configuration.hardware.spiChannel", Byte.class);
@@ -69,12 +69,12 @@ public class Application {
         final RFShowControlController controller = new RFShowControlControllerImpl(rf24Hardware, numberOfChannel);
         controller.start(rfChannel, pipeAddress, RFShowControlRF24Adapter.Mode.TX);
         return controller;
-    }
+    }*/
 
-    /*@Bean
+    @Bean
     RFShowControlController rfShowControlControllerMock() {
         return new RFShowControlControllerMockImpl(environment.getRequiredProperty("fr.jstessier.ledcontroller.configuration.rf.numberOfChannel", Byte.class));
-    }*/
+    }
 
     /**
      *

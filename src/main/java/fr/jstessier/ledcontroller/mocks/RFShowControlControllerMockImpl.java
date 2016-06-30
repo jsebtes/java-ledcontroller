@@ -54,7 +54,7 @@ public class RFShowControlControllerMockImpl implements RFShowControlController 
             throw new IllegalArgumentException("channelNumber must be in range [1-" + channelValues.length + "]");
         }
         channelValues[channelNumber - 1] = newChannelValue;
-        LOGGER.info("call updateChannelValue : updateChannelValue={}", Arrays.toString(channelValues));
+        LOGGER.info("call updateChannelValue : updatedChannelValue={}", Arrays.toString(channelValues));
         return this;
     }
 
@@ -70,7 +70,7 @@ public class RFShowControlControllerMockImpl implements RFShowControlController 
             throw new IllegalArgumentException("startChannelNumber + newChannelValues.length must not exceed " + channelValues.length);
         }
         System.arraycopy(newChannelValues, 0, channelValues, startChannelNumber - 1, newChannelValues.length);
-        LOGGER.info("call updateChannelValues : updateChannelValues={}", Arrays.toString(channelValues));
+        LOGGER.info("call updateChannelValues : updatedChannelValues={}", Arrays.toString(channelValues));
         return this;
     }
 
@@ -80,7 +80,7 @@ public class RFShowControlControllerMockImpl implements RFShowControlController 
             throw new IllegalArgumentException("newChannelValues length must be equal to " + channelValues.length);
         }
         System.arraycopy(newChannelValues, 0, channelValues, 0, channelValues.length);
-        LOGGER.info("call updateChannelValues : updateChannelValues={}", Arrays.toString(channelValues));
+        LOGGER.info("call updateChannelValues : updatedChannelValues={}", Arrays.toString(channelValues));
         return this;
     }
 

@@ -17,7 +17,7 @@ import java.util.Optional;
 @Validated
 public interface LedControllerService {
 
-    List<LedRgb> getLeds(@Size(min = 0, max = 20) @Min(0) @Max(20) Integer ...ids);
+    List<LedRgb> getLeds(@Size(min = 0, max = 20) Integer ...ids);
 
     Optional<LedRgb> getLed(@NotNull @Min(0) @Max(20) Integer id);
 
@@ -29,7 +29,7 @@ public interface LedControllerService {
 
     //
 
-    List<LedRgbGroup> getGroups(@Size(min = 0, max = 20) @Min(0) @Max(20) Integer ...ids);
+    List<LedRgbGroup> getGroups(@Size(min = 0, max = 20) Integer ...ids);
 
     Optional<LedRgbGroup> getGroup(@NotNull @Min(0) @Max(20) Integer id);
 
