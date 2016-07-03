@@ -1,9 +1,10 @@
 var path = require('path');
 
+//externals: {
+//angular: 'angular'
+//},
+
 module.exports = {
-    externals: {
-        angular: 'angular'
-    },
     entry: './app/bootstrap.js',
     output: {
         path: './dist',

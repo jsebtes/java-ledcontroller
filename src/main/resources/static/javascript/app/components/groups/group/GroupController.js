@@ -8,4 +8,10 @@ export default class GroupController {
         this.LedControllerService = LedControllerService;
     }
 
+    
+    
+    updateGroupColorRgb(group) {
+        this.LedControllerService.updateGroupColorRgb(group)
+    }
+    
 }

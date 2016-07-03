@@ -1,4 +1,6 @@
 <section>
-    <div>{{$ctrl.group.label}}</div>
+    <div><span>{{$ctrl.group.label}}</span></div>
     <color-picker color-rgb="$ctrl.group.colorRgb"></color-picker>
+
+    <button ng-click="$ctrl.updateGroupColorRgb($ctrl.group)" ng-disabled="wineForm.$invalid">Ayé !</button>
 </section>

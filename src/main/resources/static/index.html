@@ -2,17 +2,19 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <title>Administration des interrupteurs</title>
+    <base href="/">
+    <title>Led Controller</title>
     <link rel="stylesheet" href="./webjars/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/app.css">
 </head>
 <body>
+
     {{'Bienvenue' + ' dans cette ' + 'application !'}}
 
-    <groups></groups>
+    <a ui-sref="groups">Groups</a> <a ui-sref="leds">Leds</a>
 
-    <leds></leds>
+    <ui-view></ui-view>
 
-    <script src="./webjars/angularjs/1.5.7/angular.min.js"></script>
     <script src="./javascript/dist/app.bundle.js"></script>
 </body>
 </html>

@@ -1,0 +1,10 @@
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.full-width {
+    width: 100%;
+}
+
+.btn-list {
+    margin-bottom: 5px;
+}

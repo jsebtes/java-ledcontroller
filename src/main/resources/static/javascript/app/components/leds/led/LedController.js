@@ -6,8 +6,6 @@ export default class LedController {
         this.$scope = $scope;
         this.$log = $log;
         this.LedControllerService = LedControllerService;
-
-        this.$log.info('Mon controller led');
     }
 
 }
