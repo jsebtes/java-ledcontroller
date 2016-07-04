@@ -1,5 +1,162 @@
-<div>
-    <input type="text" name="red" ng-model="$ctrl.colorRgb.red" />
+<section>
+
+    <div id="colorPicker">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+             id="colorPickerSvg"
+             viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet"
+             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%">
+            <defs>
+                <path id="path6" d="M200,0 A200,200 0 0 1 300,26.8 L287.5,48.4 A175,175 0 0 0 200,25Z" />
+                <path id="path5" d="M200,25 A175,175 0 0 1 287.5,48.4 L275,70.1 A150,150 0 0 0 200,50Z" />
+                <path id="path4" d="M200,50 A150,150 0 0 1 275,70.1 L262.5,91.7 A125,125 0 0 0 200,75Z" />
+                <path id="path3" d="M200,75 A125,125 0 0 1 262.5,91.7 L250,113.4 A100,100 0 0 0 200,100Z" />
+                <path id="path2" d="M200,100 A100,100 0 0 1 250,113.4 L237.5,135 A75,75 0 0 0 200,125Z" />
+                <path id="path1" d="M200,125 A75,75 0 0 1 237.5,135 L225,156.7 A50,50 0 0 0 200,150Z" />
+                <path id="path0" d="M200,150 A50,50 0 0 1 225,156.7 L212.5,178.3 A25,25 0 0 0 200,175Z" />
+            </defs>
+            <g>
+                <!-- Background of color wheel -->
+                <circle cx="200" cy="200" r="200" fill="#FFFFFF" />
+            </g>
+            <g>
+                <!-- Center - White color -->
+                <circle cx="200" cy="200" r="50" fill="#FFFFFF" />
+            </g>
+            <g>
+                <!-- <use svg-base-fix xlink:href="#path0" fill="#E0C3D3" transform="rotate(15,200,200)" /> -->
+                <use svg-base-fix xlink:href="#path1" fill="#E0A0C3" transform="rotate(15,200,200)" />
+                <use svg-base-fix xlink:href="#path2" fill="#E080B5" transform="rotate(15,200,200)" />
+                <use svg-base-fix xlink:href="#path3" fill="#E061A7" transform="rotate(15,200,200)" />
+                <use svg-base-fix xlink:href="#path4" fill="#E04198" transform="rotate(15,200,200)" />
+                <use svg-base-fix xlink:href="#path5" fill="#E0228B" transform="rotate(15,200,200)" />
+                <use svg-base-fix xlink:href="#path6" fill="#E10071" transform="rotate(15,200,200)" />
+            </g>
+            <g>
+                <!-- <use svg-base-fix xlink:href="#path0" fill="#FFD9D9" transform="rotate(45,200,200)" /> -->
+                <use svg-base-fix xlink:href="#path1" fill="#FFB6B6" transform="rotate(45,200,200)" />
+                <use svg-base-fix xlink:href="#path2" fill="#FF8F8F" transform="rotate(45,200,200)" />
+                <use svg-base-fix xlink:href="#path3" fill="#FF6E6E" transform="rotate(45,200,200)" />
+                <use svg-base-fix xlink:href="#path4" fill="#FF4848" transform="rotate(45,200,200)" />
+                <use svg-base-fix xlink:href="#path5" fill="#FF2424" transform="rotate(45,200,200)" />
+                <use svg-base-fix xlink:href="#path6" fill="#FF0000" transform="rotate(45,200,200)" />
+            </g>
+            <g>
+                <!-- <use svg-base-fix xlink:href="#path0" fill="#FFEBD9" transform="rotate(75,200,200)" /> -->
+                <use svg-base-fix xlink:href="#path1" fill="#FFD7B3" transform="rotate(75,200,200)" />
+                <use svg-base-fix xlink:href="#path2" fill="#FFC48F" transform="rotate(75,200,200)" />
+                <use svg-base-fix xlink:href="#path3" fill="#FFB26C" transform="rotate(75,200,200)" />
+                <use svg-base-fix xlink:href="#path4" fill="#FF9F48" transform="rotate(75,200,200)" />
+                <use svg-base-fix xlink:href="#path5" fill="#FF8C24" transform="rotate(75,200,200)" />
+                <use svg-base-fix xlink:href="#path6" fill="#FF8000" transform="rotate(75,200,200)" />
+            </g>
+            <g>
+                <!-- <use svg-base-fix xlink:href="#path0" fill="#FFFED9" transform="rotate(105,200,200)" /> -->
+                <use svg-base-fix xlink:href="#path1" fill="#FFFDB3" transform="rotate(105,200,200)" />
+                <use svg-base-fix xlink:href="#path2" fill="#FFFC8F" transform="rotate(105,200,200)" />
+                <use svg-base-fix xlink:href="#path3" fill="#FFFB6C" transform="rotate(105,200,200)" />
+                <use svg-base-fix xlink:href="#path4" fill="#FFFA48" transform="rotate(105,200,200)" />
+                <use svg-base-fix xlink:href="#path5" fill="#FFF924" transform="rotate(105,200,200)" />
+                <use svg-base-fix xlink:href="#path6" fill="#FFFF00" transform="rotate(105,200,200)" />
+            </g>
+            <g>
+                <!-- <use svg-base-fix xlink:href="#path0" fill="#EBFFD9" transform="rotate(135,200,200)" /> -->
+                <use svg-base-fix xlink:href="#path1" fill="#D8FFB6" transform="rotate(135,200,200)" />
+                <use svg-base-fix xlink:href="#path2" fill="#C5FF92" transform="rotate(135,200,200)" />
+                <use svg-base-fix xlink:href="#path3" fill="#B1FF6C" transform="rotate(135,200,200)" />
+                <use svg-base-fix xlink:href="#path4" fill="#9DFF48" transform="rotate(135,200,200)" />
+                <use svg-base-fix xlink:href="#path5" fill="#8AFF24" transform="rotate(135,200,200)" />
+                <use svg-base-fix xlink:href="#path6" fill="#71FF00" transform="rotate(135,200,200)" />
+            </g>
+            <g>
+                <!-- <use svg-base-fix xlink:href="#path0" fill="#DCFFDC" transform="rotate(165,200,200)" /> -->
+                <use svg-base-fix xlink:href="#path1" fill="#B6FFB6" transform="rotate(165,200,200)" />
+                <use svg-base-fix xlink:href="#path2" fill="#92FF92" transform="rotate(165,200,200)" />
+                <use svg-base-fix xlink:href="#path3" fill="#6EFF6E" transform="rotate(165,200,200)" />
+                <use svg-base-fix xlink:href="#path4" fill="#4AFF4A" transform="rotate(165,200,200)" />
+                <use svg-base-fix xlink:href="#path5" fill="#27FF27" transform="rotate(165,200,200)" />
+                <use svg-base-fix xlink:href="#path6" fill="#00FF00" transform="rotate(165,200,200)" />
+            </g>
+            <g>
+                <!-- <use svg-base-fix xlink:href="#path0" fill="#DCFFED" transform="rotate(195,200,200)" /> -->
+                <use svg-base-fix xlink:href="#path1" fill="#B6FFD9" transform="rotate(195,200,200)" />
+                <use svg-base-fix xlink:href="#path2" fill="#92FFC6" transform="rotate(195,200,200)" />
+                <use svg-base-fix xlink:href="#path3" fill="#6EFFB3" transform="rotate(195,200,200)" />
+                <use svg-base-fix xlink:href="#path4" fill="#4AFFA0" transform="rotate(195,200,200)" />
+                <use svg-base-fix xlink:href="#path5" fill="#27FF8D" transform="rotate(195,200,200)" />
+                <use svg-base-fix xlink:href="#path6" fill="#00FF80" transform="rotate(195,200,200)" />
+            </g>
+            <g>
+                <!-- <use svg-base-fix xlink:href="#path0" fill="#DCFFFE" transform="rotate(225,200,200)" /> -->
+                <use svg-base-fix xlink:href="#path1" fill="#B6FFFD" transform="rotate(225,200,200)" />
+                <use svg-base-fix xlink:href="#path2" fill="#92FFFC" transform="rotate(225,200,200)" />
+                <use svg-base-fix xlink:href="#path3" fill="#6EFFFB" transform="rotate(225,200,200)" />
+                <use svg-base-fix xlink:href="#path4" fill="#4AFFFA" transform="rotate(225,200,200)" />
+                <use svg-base-fix xlink:href="#path5" fill="#27FFF9" transform="rotate(225,200,200)" />
+                <use svg-base-fix xlink:href="#path6" fill="#00FFFF" transform="rotate(225,200,200)" />
+            </g>
+            <g>
+                <!-- <use svg-base-fix xlink:href="#path0" fill="#DCEFFF" transform="rotate(255,200,200)" /> -->
+                <use svg-base-fix xlink:href="#path1" fill="#B6DEFF" transform="rotate(255,200,200)" />
+                <use svg-base-fix xlink:href="#path2" fill="#92CEFF" transform="rotate(255,200,200)" />
+                <use svg-base-fix xlink:href="#path3" fill="#6EBEFF" transform="rotate(255,200,200)" />
+                <use svg-base-fix xlink:href="#path4" fill="#4AADFF" transform="rotate(255,200,200)" />
+                <use svg-base-fix xlink:href="#path5" fill="#279EFF" transform="rotate(255,200,200)" />
+                <use svg-base-fix xlink:href="#path6" fill="#0080FF" transform="rotate(255,200,200)" />
+            </g>
+            <g>
+                <!-- <use svg-base-fix xlink:href="#path0" fill="#DCDCFF" transform="rotate(285,200,200)" /> -->
+                <use svg-base-fix xlink:href="#path1" fill="#B6B6FF" transform="rotate(285,200,200)" />
+                <use svg-base-fix xlink:href="#path2" fill="#9292FF" transform="rotate(285,200,200)" />
+                <use svg-base-fix xlink:href="#path3" fill="#6E6EFF" transform="rotate(285,200,200)" />
+                <use svg-base-fix xlink:href="#path4" fill="#4A4AFF" transform="rotate(285,200,200)" />
+                <use svg-base-fix xlink:href="#path5" fill="#2727FF" transform="rotate(285,200,200)" />
+                <use svg-base-fix xlink:href="#path6" fill="#0000FF" transform="rotate(285,200,200)" />
+            </g>
+            <g>
+                <!-- <use svg-base-fix xlink:href="#path0" fill="#ECDCFF" transform="rotate(315,200,200)" /> -->
+                <use svg-base-fix xlink:href="#path1" fill="#D8B6FF" transform="rotate(315,200,200)" />
+                <use svg-base-fix xlink:href="#path2" fill="#C492FF" transform="rotate(315,200,200)" />
+                <use svg-base-fix xlink:href="#path3" fill="#B16EFF" transform="rotate(315,200,200)" />
+                <use svg-base-fix xlink:href="#path4" fill="#9E4AFF" transform="rotate(315,200,200)" />
+                <use svg-base-fix xlink:href="#path5" fill="#8B27FF" transform="rotate(315,200,200)" />
+                <use svg-base-fix xlink:href="#path6" fill="#8000FF" transform="rotate(315,200,200)" />
+            </g>
+            <g>
+                <!-- <use svg-base-fix xlink:href="#path0" fill="#FEDCFF" transform="rotate(345,200,200)" /> -->
+                <use svg-base-fix xlink:href="#path1" fill="#FDB6FF" transform="rotate(345,200,200)" />
+                <use svg-base-fix xlink:href="#path2" fill="#FC92FF" transform="rotate(345,200,200)" />
+                <use svg-base-fix xlink:href="#path3" fill="#FB6EFF" transform="rotate(345,200,200)" />
+                <use svg-base-fix xlink:href="#path4" fill="#FA4AFF" transform="rotate(345,200,200)" />
+                <use svg-base-fix xlink:href="#path5" fill="#F927FF" transform="rotate(345,200,200)" />
+                <use svg-base-fix xlink:href="#path6" fill="#FF00FF" transform="rotate(345,200,200)" />
+            </g>
+        </svg>
+
+    </div>
+
+    <!--<input type="text" name="red" ng-model="$ctrl.colorRgb.red" />
     <input type="text" name="green" ng-model="$ctrl.colorRgb.green" />
-    <input type="text" name="blue" ng-model="$ctrl.colorRgb.blue" />
-</div>
+    <input type="text" name="blue" ng-model="$ctrl.colorRgb.blue" />-->
+
+    <script>
+        $("#colorPickerSvg g use, #colorPickerSvg g circle").click(function(event) {
+            $("body").css("background-color", $(this).attr("fill"));
+            updateSelectedColor("#colorPickerSvg", this);
+        });
+
+
+        function updateSelectedColor(colorPickerSvgSelector, eventSvgElement) {
+            var selectedColorElement = $(colorPickerSvgSelector + " .selectedColor");
+            if (selectedColorElement) {
+                selectedColorElement.remove();
+            }
+            selectedColorElement = $(eventSvgElement).clone(true);
+            selectedColorElement.attr("class", "selectedColor");
+            selectedColorElement.attr("fill-opacity", "0");
+            selectedColorElement.attr("stroke", "grey");
+            selectedColorElement.attr("stroke-width", "3");
+            $(colorPickerSvgSelector).append(selectedColorElement);
+        }
+    </script>
+
+</section>

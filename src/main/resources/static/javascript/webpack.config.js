@@ -1,16 +1,15 @@
 var path = require('path');
 
-//externals: {
-//angular: 'angular'
-//},
-
 module.exports = {
     entry: './app/bootstrap.js',
+    externals: {
+        'angular': 'angular',
+        "jquery": "jQuery"
+    },
     output: {
         path: './dist',
         filename: 'app.bundle.js'
     },
-    //devtool: '#cheap-source-map',
     devtool: '#source-map',
     module: {
         loaders: [

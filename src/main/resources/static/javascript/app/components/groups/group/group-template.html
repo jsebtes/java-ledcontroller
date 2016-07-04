@@ -1,6 +1,18 @@
 <section>
-    <div><span>{{$ctrl.group.label}}</span></div>
-    <color-picker color-rgb="$ctrl.group.colorRgb"></color-picker>
 
-    <button ng-click="$ctrl.updateGroupColorRgb($ctrl.group)" ng-disabled="wineForm.$invalid">Ayé !</button>
+    <div class="panel panel-default">
+        <div class="panel-heading">{{$ctrl.group.label}}</div>
+        <div class="panel-body">
+            <color-picker color-rgb="$ctrl.group.colorRgb"></color-picker>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="col-md-12 text-center btn-group-device-edit-action">
+        <div class="btn-group" role="group">
+            <button class="btn btn-default btn-device-edit-cancel" ng-click="$ctrl.cancel()">Cancel</button>
+            <button class="btn btn-primary btn-device-edit-save" ng-click="$ctrl.updateGroupColorRgb($ctrl.group)">Save</button>
+        </div>
+    </div>
+
 </section>

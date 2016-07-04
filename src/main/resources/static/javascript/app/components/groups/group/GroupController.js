@@ -1,17 +1,21 @@
 export default class GroupController {
 
-    static $inject = ['$scope', '$log', 'LedControllerService'];
+    static $inject = ['$state', 'LedControllerService'];
 
-    constructor($scope, $log, LedControllerService) {
-        this.$scope = $scope;
-        this.$log = $log;
+    constructor($state, LedControllerService) {
+        this.$state = $state;
         this.LedControllerService = LedControllerService;
     }
 
-    
+    cancel() {
+        this.$state.go('groups');
+    }
     
     updateGroupColorRgb(group) {
         this.LedControllerService.updateGroupColorRgb(group)
+            .then(() => {
+                this.$state.go('groups');
+            });
     }
     
 }

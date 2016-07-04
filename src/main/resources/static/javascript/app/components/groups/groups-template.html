@@ -3,14 +3,12 @@
     <div class="container">
         <div class="row" ng-repeat="group in $ctrl.groups">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-                <a class="btn btn-default full-width btn-list" ui-sref="editGroupColor({id: group.id})">
-                    <div><span>{{group.label}}</span></div>
-                    <div ng-style="{'background-color': (group.colorRgb | cssColorRgb)}"></div>
+                <a class="btn btn-default full-width btn-device-list" ui-sref="editGroupColor({id: group.id})">
+                    <span>{{group.label}}</span>
+                    <div ng-style="{'background-color': (group.colorRgb | cssColorRgb)}"    ></div>
                 </a>
             </div>
         </div>
     </div>
-
-
 
 </section>
