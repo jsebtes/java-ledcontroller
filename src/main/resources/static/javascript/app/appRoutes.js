@@ -16,7 +16,7 @@ export function routing($stateProvider, $urlRouterProvider, $locationProvider) {
             controller: ($scope, led) => Object.assign($scope, { led }),
             resolve: {
                 LedControllerService: 'LedControllerService',
-                group: ['LedControllerService', '$stateParams', (LedControllerService, $stateParams) =>
+                led: ['LedControllerService', '$stateParams', (LedControllerService, $stateParams) =>
                     LedControllerService.getLed($stateParams.id)],
             },
         })

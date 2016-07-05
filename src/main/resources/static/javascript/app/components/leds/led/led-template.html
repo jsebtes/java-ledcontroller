@@ -1,4 +1,18 @@
 <section>
-    <div>{{$ctrl.led.label}}</div>
-    <color-picker color-rgb="$ctrl.led.colorRgb"></color-picker>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">{{$ctrl.led.label}}</div>
+        <div class="panel-body">
+            <color-picker color-rgb="$ctrl.led.colorRgb"></color-picker>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="col-md-12 text-center btn-group-device-edit-action">
+        <div class="btn-group" role="group">
+            <button class="btn btn-default btn-device-edit-cancel" ng-click="$ctrl.cancel()">Cancel</button>
+            <button class="btn btn-primary btn-device-edit-save" ng-click="$ctrl.updateLedColorRgb($ctrl.led)">Save</button>
+        </div>
+    </div>
+
 </section>

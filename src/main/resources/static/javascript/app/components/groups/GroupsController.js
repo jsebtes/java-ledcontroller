@@ -12,10 +12,4 @@ export default class GroupsController {
         );
     }
 
-
-    colorFromColorRgb(colorRgb) {
-        return 'rgb(' + colorRgb.red + ', ' + colorRgb.green + ', ' + colorRgb.blue + ')';
-    }
-
-
 }

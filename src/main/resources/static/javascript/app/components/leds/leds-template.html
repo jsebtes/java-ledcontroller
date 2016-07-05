@@ -1,4 +1,14 @@
 <section>
-    LEDS
-    <led ng-repeat="led in $ctrl.leds" led="led"></led>
+
+    <div class="container">
+        <div class="row" ng-repeat="led in $ctrl.leds">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <a class="btn btn-default full-width btn-device-list" ui-sref="editLedColor({id: led.id})">
+                    <span>{{led.label}}</span>
+                    <div ng-style="{'background-color': (led.colorRgb | cssColorRgb)}" ></div>
+                </a>
+            </div>
+        </div>
+    </div>
+
 </section>

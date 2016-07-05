@@ -1,11 +1,21 @@
 export default class LedController {
 
-    static $inject = ['$scope', '$log', 'LedControllerService'];
+    static $inject = ['$state', 'LedControllerService'];
 
-    constructor($scope, $log, LedControllerService) {
-        this.$scope = $scope;
-        this.$log = $log;
+    constructor($state, LedControllerService) {
+        this.$state = $state;
         this.LedControllerService = LedControllerService;
+    }
+
+    cancel() {
+        this.$state.go('leds');
+    }
+
+    updateLedColorRgb(led) {
+        this.LedControllerService.updateLedColorRgb(led)
+            .then(() => {
+                this.$state.go('leds');
+            });
     }
 
 }
