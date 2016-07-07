@@ -4,7 +4,6 @@ module.exports = {
     entry: './app/bootstrap.js',
     externals: {
         'angular': 'angular',
-        "jquery": "jQuery"
     },
     output: {
         path: './dist',
@@ -21,7 +20,8 @@ module.exports = {
                     presets: ['es2015', 'stage-1']
                 }
             },
-            { test: /\.html$/, loader: "html" }
+            { test: /\.html$/, loader: "html" },
+            { test: /\.css$/, loader: "css" }
         ]
     }
 };

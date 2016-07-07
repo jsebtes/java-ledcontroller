@@ -11,7 +11,7 @@
     justify-content: center;
 }
 
-.btn-device-list span {
+.btn-device-list label {
     margin-top: 5px;
     margin-bottom: 5px;
     margin-right: 5px;
@@ -27,6 +27,14 @@
     width: 100px;
 }
 
+.btn-device-list span {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-size: larger;
+    min-width: 45px;
+}
+
 .btn-group-device-edit-action {
 
 }
@@ -37,4 +45,19 @@
 
 .btn-device-edit-save {
 
+}
+
+.navbar-fullsize {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar-fullsize ul {
+    display: flex;
+    width: 100%;
+}
+
+.navbar-fullsize li {
+    flex-grow: 1;
+    text-align: center;
 }

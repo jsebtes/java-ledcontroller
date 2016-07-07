@@ -134,7 +134,7 @@ public class LedControllerServiceImpl implements LedControllerService {
         }
         final LedRgb before = leds.put(ledRgb.getId(), ledRgb);
         if (!Objects.equals(before.getAddress(), ledRgb.getAddress())) {
-            updateOneLedChannelValues(new ColorRgb(0, 0, 0), before.getAddress(), false);
+            updateOneLedChannelValues(new ColorRgb(0, 0, 0, 0), before.getAddress(), false);
             updateOneLedChannelValues(ledRgb.getColorRgb(), ledRgb.getAddress(), flushChannelValues);
         }
         else if (!Objects.equals(before.getColorRgb(), ledRgb.getColorRgb())) {
@@ -159,7 +159,7 @@ public class LedControllerServiceImpl implements LedControllerService {
 
     private void updateOneLedChannelValues(ColorRgb colorRgb, Integer address, boolean flushChannelValues) throws RFShowControlException {
         rfShowControlController.updateChannelValues(
-                Optional.ofNullable(colorRgb).orElse(new ColorRgb(0, 0, 0)).toRgbArray(),
+                Optional.ofNullable(colorRgb).orElse(new ColorRgb(0, 0, 0, 0)).toRgbArray(),
                 address);
         if (flushChannelValues) {
             rfShowControlController.flushChannelValues();

@@ -5,6 +5,7 @@ public final class ColorRgbBuilder {
     private Integer red;
     private Integer green;
     private Integer blue;
+    private Integer intensity;
 
     private ColorRgbBuilder() {
         // NOP
@@ -19,6 +20,7 @@ public final class ColorRgbBuilder {
             this.red = colorRgb.getRed();
             this.green = colorRgb.getGreen();
             this.blue = colorRgb.getBlue();
+            this.intensity = colorRgb.getIntensity();
         }
         return this;
     }
@@ -38,12 +40,17 @@ public final class ColorRgbBuilder {
         return this;
     }
 
+    public ColorRgbBuilder withIntensity(Integer intensity) {
+        this.intensity = intensity;
+        return this;
+    }
+
     public ColorRgbBuilder but() {
         return aColorRgb().withRed(red).withGreen(green).withBlue(blue);
     }
 
     public ColorRgb build() {
-        ColorRgb colorRgb = new ColorRgb(red, green, blue);
+        ColorRgb colorRgb = new ColorRgb(red, green, blue, intensity);
         return colorRgb;
     }
 

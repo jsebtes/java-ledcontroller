@@ -5,9 +5,10 @@
       "label": "Spots sol 1",
       "address": 1,
       "colorRgb": {
-        "red": 0,
-        "green": 0,
-        "blue": 0
+        "red": 255,
+        "green": 255,
+        "blue": 255,
+        "intensity": 0
       }
     },
     {
@@ -15,9 +16,10 @@
       "label": "Spots sol 2",
       "address": 4,
       "colorRgb": {
-        "red": 0,
-        "green": 0,
-        "blue": 0
+        "red": 255,
+        "green": 255,
+        "blue": 255,
+        "intensity": 0
       }
     },
     {
@@ -25,9 +27,10 @@
       "label": "Spots sol 3",
       "address": 7,
       "colorRgb": {
-        "red": 0,
-        "green": 0,
-        "blue": 0
+        "red": 255,
+        "green": 255,
+        "blue": 255,
+        "intensity": 0
       }
     },
     {
@@ -35,9 +38,10 @@
       "label": "Spots sol 4",
       "address": 10,
       "colorRgb": {
-        "red": 0,
-        "green": 0,
-        "blue": 0
+        "red": 255,
+        "green": 255,
+        "blue": 255,
+        "intensity": 0
       }
     },
     {
@@ -45,9 +49,10 @@
       "label": "Ruban lustre",
       "address": 13,
       "colorRgb": {
-        "red": 0,
-        "green": 0,
-        "blue": 0
+        "red": 255,
+        "green": 255,
+        "blue": 255,
+        "intensity": 0
       }
     },
     {
@@ -55,9 +60,10 @@
       "label": "Spot lustre 1",
       "address": 16,
       "colorRgb": {
-        "red": 0,
-        "green": 0,
-        "blue": 0
+        "red": 255,
+        "green": 255,
+        "blue": 255,
+        "intensity": 0
       }
     },
     {
@@ -65,9 +71,10 @@
       "label": "Spot lustre 2",
       "address": 19,
       "colorRgb": {
-        "red": 0,
-        "green": 0,
-        "blue": 0
+        "red": 255,
+        "green": 255,
+        "blue": 255,
+        "intensity": 0
       }
     },
     {
@@ -75,9 +82,10 @@
       "label": "Spot lustre 3",
       "address": 22,
       "colorRgb": {
-        "red": 0,
-        "green": 0,
-        "blue": 0
+        "red": 255,
+        "green": 255,
+        "blue": 255,
+        "intensity": 0
       }
     },
     {
@@ -85,9 +93,10 @@
       "label": "Spot lustre 4",
       "address": 25,
       "colorRgb": {
-        "red": 0,
-        "green": 0,
-        "blue": 0
+        "red": 255,
+        "green": 255,
+        "blue": 255,
+        "intensity": 0
       }
     },
     {
@@ -95,9 +104,10 @@
       "label": "Spot lustre 5",
       "address": 28,
       "colorRgb": {
-        "red": 0,
-        "green": 0,
-        "blue": 0
+        "red": 255,
+        "green": 255,
+        "blue": 255,
+        "intensity": 0
       }
     },
     {
@@ -105,9 +115,10 @@
       "label": "Spot lustre 6",
       "address": 31,
       "colorRgb": {
-        "red": 0,
-        "green": 0,
-        "blue": 0
+        "red": 255,
+        "green": 255,
+        "blue": 255,
+        "intensity": 0
       }
     },
     {
@@ -115,9 +126,10 @@
       "label": "Spot lustre 7",
       "address": 34,
       "colorRgb": {
-        "red": 0,
-        "green": 0,
-        "blue": 0
+        "red": 255,
+        "green": 255,
+        "blue": 255,
+        "intensity": 0
       }
     },
     {
@@ -125,9 +137,10 @@
       "label": "Spot lustre 8",
       "address": 37,
       "colorRgb": {
-        "red": 0,
-        "green": 0,
-        "blue": 0
+        "red": 255,
+        "green": 255,
+        "blue": 255,
+        "intensity": 0
       }
     },
     {
@@ -135,9 +148,10 @@
       "label": "Spot lustre boule 1",
       "address": 40,
       "colorRgb": {
-        "red": 0,
-        "green": 0,
-        "blue": 0
+        "red": 255,
+        "green": 255,
+        "blue": 255,
+        "intensity": 0
       }
     },
     {
@@ -145,9 +159,10 @@
       "label": "Spot lustre boule 2",
       "address": 43,
       "colorRgb": {
-        "red": 0,
-        "green": 0,
-        "blue": 0
+        "red": 255,
+        "green": 255,
+        "blue": 255,
+        "intensity": 0
       }
     }
   ],
@@ -159,9 +174,10 @@
         1, 2, 3, 4
       ],
       "colorRgb": {
-        "red": 0,
-        "green": 0,
-        "blue": 0
+        "red": 255,
+        "green": 255,
+        "blue": 255,
+        "intensity": 0
       }
     },
     {
@@ -171,9 +187,10 @@
         5, 6, 7, 8, 9, 10, 11, 12, 13
       ],
       "colorRgb": {
-        "red": 0,
-        "green": 0,
-        "blue": 0
+        "red": 255,
+        "green": 255,
+        "blue": 255,
+        "intensity": 0
       }
     },
     {
@@ -183,9 +200,10 @@
         14, 15
       ],
       "colorRgb": {
-        "red": 0,
-        "green": 0,
-        "blue": 0
+        "red": 255,
+        "green": 255,
+        "blue": 255,
+        "intensity": 0
       }
     }
   ]

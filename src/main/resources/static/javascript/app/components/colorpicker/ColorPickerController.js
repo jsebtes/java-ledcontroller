@@ -7,6 +7,7 @@ export default class ColorPickerController {
         this.$log = $log;
 
         this.hexColorRgb = this.colorRgbToHex(this.colorRgb);
+
         $window.hexColorRgb = this.hexColorRgb;
     }
 
@@ -29,19 +30,13 @@ export default class ColorPickerController {
         }
     }
 
-    hexToColorRgb(hex) {
-        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-        return result ? {
-            red: parseInt(result[1], 16),
-            green: parseInt(result[2], 16),
-            blue: parseInt(result[3], 16)
-        } : null;
-    }
-
     updateColor(event) {
         let colorElement = angular.element(event.event.target);
-        this.hexColorRgb = colorElement.attr('fill');
-        this.colorRgb = this.hexToColorRgb(this.hexColorRgb);
+
+        let values = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(colorElement.attr('fill'));
+        this.colorRgb.red = parseInt(values[1], 16);
+        this.colorRgb.green = parseInt(values[2], 16);
+        this.colorRgb.blue = parseInt(values[3], 16);
 
         this.updateSelectedColorElement(colorElement);
     }

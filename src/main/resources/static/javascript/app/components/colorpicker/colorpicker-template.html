@@ -1,10 +1,10 @@
 <section>
 
-    <div id="colorPicker">
+    <div class="colorPicker">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-             id="colorPickerSvg"
+             class="colorPickerSvg"
              viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet"
-             style="width: 100%; height: auto; max-height: 600px;">
+             style="width: 100%; height: auto; max-height: 600px; padding: 5px;">
             <defs>
                 <path id="path6" d="M200,0 A200,200 0 0 1 300,26.8 L287.5,48.4 A175,175 0 0 0 200,25Z" />
                 <path id="path5" d="M200,25 A175,175 0 0 1 287.5,48.4 L275,70.1 A150,150 0 0 0 200,50Z" />
@@ -16,11 +16,11 @@
             </defs>
             <g>
                 <!-- Background of color wheel -->
-                <circle cx="200" cy="200" r="200" fill="#FFFFFF" />
+                <circle class="wheelBackground" cx="200" cy="200" r="200" fill="#FFFFFF" />
             </g>
             <g>
                 <!-- Center - White color -->
-                <circle cx="200" cy="200" r="50" fill="#FFFFFF" ng-click="$ctrl.updateColor({event: $event})" />
+                <circle class="wheelCenter" cx="200" cy="200" r="50" fill="#FFFFFF" ng-click="$ctrl.updateColor({event: $event})" />
             </g>
             <g>
                 <!-- <use svg-base-fix xlink:href="#path0" fill="#E0C3D3" transform="rotate(15,200,200)" ng-click="$ctrl.updateColor({event: $event})" /> -->
@@ -133,6 +133,12 @@
         </svg>
     </div>
 
+    <div style="margin-top: 10px; display: flex;">
+        <div style="margin-right: 10px; flex-grow: 1; text-align: right;">0%</div>
+        <div style="flex-grow: 99; max-width: 500px; margin-top: 5px;" ui-slider="{range: 'min'}" min="0" max="100" ng-model="$ctrl.colorRgb.intensity"></div>
+        <div style="margin-left: 10px; flex-grow: 1;">100%</div>
+    </div>
+
     <script>
         function updateSelectedColor(colorPickerSvgSelector, eventSvgElement) {
             var selectedColorElement = $(colorPickerSvgSelector + " .selectedColor");
@@ -149,8 +155,8 @@
 
         setTimeout(function() {
             if (window.hexColorRgb) {
-                let test = $("#colorPickerSvg g use[fill='" + window.hexColorRgb + "'], #colorPickerSvg g circle[fill='" + window.hexColorRgb + "']");
-                updateSelectedColor("#colorPickerSvg", test);
+                let test = $(".colorPickerSvg g use[fill='" + window.hexColorRgb + "'], .colorPickerSvg circle[fill='" + window.hexColorRgb + "'].wheelCenter");
+                updateSelectedColor(".colorPickerSvg", test);
             }
         }, 0);
     </script>

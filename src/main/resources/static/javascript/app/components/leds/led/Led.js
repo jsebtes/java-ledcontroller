@@ -1,4 +1,3 @@
-import angular from 'angular';
 import ColorPicker from '../../colorpicker/ColorPicker';
 import LedComponent from './LedComponent';
 

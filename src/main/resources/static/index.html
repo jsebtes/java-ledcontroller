@@ -6,19 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="/">
     <title>Led Controller</title>
-    <link rel="stylesheet" href="./webjars/bootstrap/3.3.6/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./webjars/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./webjars/jquery-ui/1.10.4/themes/base/minified/jquery-ui.min.css"/>
     <link rel="stylesheet" href="./css/app.css">
 </head>
 <body>
-
-    {{'Bienvenue' + ' dans cette ' + 'application !'}}
-
-    <a ui-sref="groups">Groups</a> <a ui-sref="leds">Leds</a>
+    <nav class="navbar navbar-default">
+        <div class="collapse navbar-collapse navbar-fullsize" style="display: flex;" ng-controller="HeaderController">
+            <ul class="nav navbar-nav">
+                <li ng-class="{ active: isActive('/groups')}"><a ui-sref="groups">Groups</a></li>
+                <li ng-class="{ active: isActive('/leds')}"><a ui-sref="leds">Leds</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <ui-view></ui-view>
 
-    <script src="./webjars/jquery/2.0.0/jquery.min.js"></script>
+    <script src="./webjars/jquery/3.0.0/jquery.min.js"></script>
+    <script src="./webjars/jquery-ui/1.10.4/ui/minified/jquery-ui.min.js"></script>
     <script src="./webjars/angular/1.5.7/angular.min.js"></script>
+    <script src="./webjars/angular-ui-router/0.3.1/release/angular-ui-router.min.js"></script>
+    <script src="./webjars/angular-ui-slider/0.3.2/src/slider.js"></script>
     <script src="./javascript/dist/app.bundle.js"></script>
 </body>
 </html>

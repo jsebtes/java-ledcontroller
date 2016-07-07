@@ -1,6 +1,8 @@
 package fr.jstessier.ledcontroller;
 
+import fr.jstessier.ledcontroller.controllers.ExceptionHandlingController;
 import fr.jstessier.ledcontroller.controllers.LedControllerRest;
+import fr.jstessier.ledcontroller.controllers.RedirectionController;
 import fr.jstessier.ledcontroller.mocks.RFShowControlControllerMockImpl;
 import fr.jstessier.ledcontroller.services.LedControllerService;
 import fr.jstessier.ledcontroller.services.LedControllerServiceImpl;
@@ -33,8 +35,8 @@ import javax.validation.Validator;
 import java.io.IOException;
 import java.util.Collections;
 
-@SpringBootApplication
-/*@Configuration
+//@SpringBootApplication
+@Configuration
 @Import({
         // Configuration
         DispatcherServletAutoConfiguration.class,
@@ -46,15 +48,17 @@ import java.util.Collections;
         ServerPropertiesAutoConfiguration.class,
         WebMvcAutoConfiguration.class,
         // Components
-        LedControllerRest.class
-})*/
+        LedControllerRest.class,
+        ExceptionHandlingController.class,
+        RedirectionController.class
+})
 @PropertySource(value = "file:ledcontroller.properties")
 public class Application {
 
     @Autowired
     Environment environment;
 
-    /*@Bean
+    @Bean
     RFShowControlController rFShowControlController() throws RFShowControlException {
 
         final byte spiChannel = environment.getRequiredProperty("fr.jstessier.ledcontroller.configuration.hardware.spiChannel", Byte.class);
@@ -73,12 +77,12 @@ public class Application {
         final RFShowControlController controller = new RFShowControlControllerImpl(rf24Hardware, numberOfChannel);
         controller.start(rfChannel, pipeAddress, RFShowControlRF24Adapter.Mode.TX);
         return controller;
-    }*/
+    }
 
-    @Bean
+    /*@Bean
     RFShowControlController rfShowControlControllerMock() {
         return new RFShowControlControllerMockImpl(environment.getRequiredProperty("fr.jstessier.ledcontroller.configuration.rf.numberOfChannel", Byte.class));
-    }
+    }*/
 
     /**
      *
