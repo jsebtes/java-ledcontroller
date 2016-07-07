@@ -134,9 +134,9 @@
     </div>
 
     <div style="margin-top: 10px; display: flex;">
-        <div style="margin-right: 10px; flex-grow: 1; text-align: right;">0%</div>
+        <div style="margin-right: 10px; flex-grow: 1; text-align: right;" ng-click="$ctrl.colorRgb.intensity = 0;">0%</div>
         <div style="flex-grow: 99; max-width: 500px; margin-top: 5px;" ui-slider="{range: 'min'}" min="0" max="100" ng-model="$ctrl.colorRgb.intensity"></div>
-        <div style="margin-left: 10px; flex-grow: 1;">100%</div>
+        <div style="margin-left: 10px; flex-grow: 1;" ng-click="$ctrl.colorRgb.intensity = 100;">100%</div>
     </div>
 
     <script>
